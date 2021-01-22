@@ -21,4 +21,11 @@ class SpringbootdemoApplicationTests {
 		System.out.println(list.contains("qqq"));
 	}
 
+	@Test
+	void listTest(){
+		String id = "131025199205214810";
+		String id2 = id.substring(id.length()-1);
+		System.out.println("id2 = " + id2);
+	}
+
 }
