@@ -21,13 +21,14 @@ public class FileConcat {
      * @throws IOException
      */
     public static void concatAllFile(String inputPath, String outputPath) throws IOException {
-        System.out.println("start concat files...");
+
         inputPath = inputPath + "\\";
         outputPath = outputPath + "\\";
         File[] dirFiles = new File(inputPath).listFiles();
         for (File dirFile : dirFiles
                 ) {
             String fileName = dirFile.getName();
+            System.out.println("start concat file "+inputPath+fileName+"...");
             FileOutputStream fos;
             fos = new FileOutputStream(outputPath + fileName);
             byte[] buffer = new byte[1024];
@@ -38,8 +39,10 @@ public class FileConcat {
                     fos.write(buffer, 0, temp);
                 }
                 fos.flush();
+                fis.close();
             }
             fos.close();
+            System.out.println("concat file "+inputPath+fileName+" finish!\n");
         }
     }
 
