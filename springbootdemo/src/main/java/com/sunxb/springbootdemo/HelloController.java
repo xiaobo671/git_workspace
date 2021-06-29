@@ -1,4 +1,4 @@
-package com.ist.springbootdemo;
+package com.sunxb.springbootdemo;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
